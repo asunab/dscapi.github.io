@@ -211,14 +211,6 @@
             transform-origin: 100% 100%;
             z-index: 1;
         }
-        .footer {
-            box-sizing: border-box;
-            height: 3em;
-            max-height: 3em;
-            font-size: .8em;
-            margin: 0;
-            padding: 1em;
-        }
         .large-only {
             display: none;
         }
@@ -492,10 +484,10 @@
                 var clientID = document.getElementById("clientID").value;
                 var ok = clientID.match(/^\d{17,18}$/);
                 if(ok) {
-                    document.getElementById("clientID").className = "success";
+                    document.getElementById("clientID").className = "";
                     document.getElementById("invite").className = "";
                 } else {
-                    document.getElementById("clientID").className = "error";
+                    document.getElementById("clientID").className = "";
                     document.getElementById("invite").className = "disabled";
                 }
 
@@ -519,10 +511,10 @@
 
                 document.getElementById("invite").innerHTML = document.getElementById("invite").href = url;
             } else {
-                document.getElementById("clientID").className = "error";
+                document.getElementById("clientID").className = "";
                 document.getElementById("invite").className = "disabled";
-                document.getElementById("invite").innerHTML = "https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot&permissions=" + (perm + "").split("=")[0].trim();
-                document.getElementById("invite").href = "#";
+                document.getElementById("invite").innerHTML = "https://discord.com/oauth2/authorize?client_id=INSERT_CLIENT_ID&scope=bot&permissions=" + (perm + "").split("=")[0].trim();
+                document.getElementById("invite").href = "#INSERT_CLIENT_ID";
             }
         }
 
