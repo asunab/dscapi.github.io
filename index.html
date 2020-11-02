@@ -211,6 +211,14 @@
             transform-origin: 100% 100%;
             z-index: 1;
         }
+        .footer {
+            box-sizing: border-box;
+            height: 3em;
+            max-height: 3em;
+            font-size: .8em;
+            margin: 0;
+            padding: 1em;
+        }
         .large-only {
             display: none;
         }
@@ -251,20 +259,26 @@
 </div>
 <div class="container stacky-footer">
 <div class="oauth">
-<h3>Invite a Bot</h3>
+<h3>Invite a Bot<hr></h3>
 <p>
 <span>Client ID: <input id="clientID" type="text" placeholder="264811613708746752" onkeyup="recalculate()"></span>
 <br>
-<span>Invitation Link: <a href="#" id="invite"></a></span>
+<span>Invitation Link: <a href="#" id="invite" style="text-decoration: none;"></a></span>
 <br>
-<span>Calculated Permissions: <span id="number">0</span>&nbsp;<code id="equation">0x0</code></span>
- <!-- <div class="result">
-<p>
-<span class="permissions">Calculated Permissions: <code id="number">0</code></span>
-  &nbsp;
-<code id="equation">0x0</code>
-</p>
-</div>-->
+<span>Calculated Permissions: <span id="number" style="color:white">0</span>&nbsp;<code id="equation">0x0</code></span>
+  
+<div class="selector" >
+<div class="col-me-maybe">
+<input id="oauthCodeGrant" type="checkbox" onclick="recalculate()">
+<label for="oauthCodeGrant">Require Code Grant</label>
+</div>
+<div class="col-me-maybe">
+<span>Redirect URL: <input id="oauthRedirect" type="text" placeholder="(optional)" onkeyup="recalculate()"></span>
+</div>
+<div class="col-me-maybe">
+<span>Scope: <input id="oauthScopes" type="text" placeholder="bot" onkeyup="recalculate()"></span>
+</div>
+</div>
 </p>
 </div>
 <div class="selector">
@@ -404,7 +418,6 @@
 </ul>
 </div>
 </div>
-
  <br>
   <center>
   <a href="https://discord.gg/T4BMtSu" target="_blank"><img src="https://discordapp.com/api/guilds/683005629836951799/embed.png?style=banner2" style="border-radius:4px"></a>
