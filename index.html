@@ -9,6 +9,7 @@
 <meta name="keywords" content="Discordperm, discordapi, perm, api, permission">
 <link rel="icon" type="image/ico" href="https://discord.com/assets/07dca80a102d4149e9736d4b162cff6f.ico" />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-B9BoFFAuBaCfqw6lxWBZrhg/z4NkwqdBci+E+Sc2XlK/Rz25RYn8Fetb+Aw5irxa" crossorigin="anonymous">
 <title>Permissions Calculator - discordapi.js.org</title>
 <style>
         @font-face {
@@ -194,8 +195,8 @@
             position: absolute;
         }
         input[type="checkbox" i]:checked+label:after {
-            background-color: #7289DA;
-            border-color: #7289DA;
+            background-color: #43b581;
+            border-color: #43b581;
         }
         input[type="checkbox" i]:checked+label:before {
             top: 0;
@@ -261,16 +262,13 @@
 <body class="select-none" draggable="false">
 <div class="header">
 <img draggable="false" class="logo select-none" src="https://cdn.discordapp.com/attachments/753632375858135152/772807172940890162/permcalculator.png"/>
-  <!--<a class="right-link eyes" href="#" onclick="swapTheme()">
-<img src="https://abal.moe/eyes.png" alt="theme" />
-</a>-->
 </div>
 <div class="container stacky-footer">
 <div class="result">
 <p>
 <span class="permissions">Permissions: <code id="number">0</code></span>
-<br />
-<span class="equation">Equation: <code id="equation">0x0</code></span>
+  &nbsp;
+<code id="equation">0x0</code>
 </p>
 </div>
 <div class="selector">
@@ -414,7 +412,7 @@
 <div class="oauth">
 <h3>OAuth URL Generator</h3>
 <p>
-<span>Client ID: <input id="clientID" type="text" placeholder="Insert Client ID here" onkeyup="recalculate()"></span>
+<span>Client ID: <input id="clientID" type="text" placeholder="264811613708746752" onkeyup="recalculate()"></span>
 <br />
 <div class="selector">
 <div class="col-me-maybe">
@@ -422,24 +420,20 @@
 <label for="oauthCodeGrant">Require Code Grant</label>
 </div>
 <div class="col-me-maybe">
-<span>Redirect URI: <input id="oauthRedirect" type="text" placeholder="(optional)" onkeyup="recalculate()"></span>
+<span>Redirect URL: <input id="oauthRedirect" type="text" placeholder="(optional)" onkeyup="recalculate()"></span>
 </div>
 <div class="col-me-maybe">
 <span>Scope: <input id="oauthScopes" type="text" placeholder="bot" onkeyup="recalculate()"></span>
 </div>
 </div>
-<span>Link: <a href="#" id="invite"></a></span>
+<span>Invitation Link: <a href="#" id="invite"></a></span>
 </p>
 </div>
-</div>
-  <br>
+ <br>
   <center>
   <a href="https://discord.gg/T4BMtSu" target="_blank"><img src="https://discordapp.com/api/guilds/683005629836951799/embed.png?style=banner2" style="border-radius:4px"></a>
   </center>
   <br>
-<!--<div class="footer">
-<span class="credit">&copy; 2017 abalabahaha | Not affiliated with Discord</span>
-</div>-->
 <script type="text/javascript">
         var perms = {
             // General
@@ -504,9 +498,9 @@
                     eq.push("0x" + perms[key].toString(16));
                 }
             }
-            eq = " = " + eq.join(" | ")
+            eq = "  " + eq.join(" + ")
             document.getElementById("number").innerHTML = "" + perm;
-            document.getElementById("equation").innerHTML = perm + eq;
+            document.getElementById("equation").innerHTML =  eq;
 
             if(!noSet) {
                 setHash("" + perm);
@@ -545,7 +539,7 @@
             } else {
                 document.getElementById("clientID").className = "error";
                 document.getElementById("invite").className = "disabled";
-                document.getElementById("invite").innerHTML = "https://discord.com/oauth2/authorize?client_id=INSERT_CLIENT_ID_HERE&scope=bot&permissions=" + (perm + "").split("=")[0].trim();
+                document.getElementById("invite").innerHTML = "https://discord.com/oauth2/authorize?client_id=CLIENT_ID&scope=bot&permissions=" + (perm + "").split("=")[0].trim();
                 document.getElementById("invite").href = "#";
             }
         }
