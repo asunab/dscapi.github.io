@@ -256,11 +256,20 @@
 <span>Client ID: <input id="clientID" type="text" placeholder="264811613708746752" onkeyup="recalculate()"></span>
 <br>
 <span>Invitation Link: <a href="#" id="invite"></a></span>
+<br>
+<span>Calculated Permissions: <span id="number">0</span>&nbsp;<code id="equation">0x0</code></span>
+ <!-- <div class="result">
+<p>
+<span class="permissions">Calculated Permissions: <code id="number">0</code></span>
+  &nbsp;
+<code id="equation">0x0</code>
+</p>
+</div>-->
 </p>
 </div>
 <div class="selector">
 <div class="col-me-maybe">
-<h3>General Permissions</h3>
+<h3>General Permissions<hr></h3>
 <ul>
 <li>
 <input id="generalAdministrator" type="checkbox" onclick="recalculate()">
@@ -313,7 +322,7 @@
 </ul>
 </div>
 <div class="col-me-maybe">
-<h3>Text Permissions</h3>
+<h3>Text Permissions<hr></h3>
 <ul>
 <li>
 <input id="textReadMessages" type="checkbox" onclick="recalculate(this)">
@@ -358,7 +367,7 @@
 </ul>
 </div>
 <div class="col-me-maybe">
-<h3>Voice Permissions</h3>
+<h3>Voice Permissions<hr></h3>
 <ul>
 <li>
 <input id="voiceViewChannel" type="checkbox" onclick="recalculate(this)">
@@ -394,13 +403,6 @@
 </li>
 </ul>
 </div>
-</div>
-  <div class="result">
-<p>
-<span class="permissions">Calculated Permissions: <code id="number">0</code></span>
-  &nbsp;
-<code id="equation">0x0</code>
-</p>
 </div>
 
  <br>
