@@ -264,11 +264,12 @@
 <img draggable="false" class="logo select-none" src="https://cdn.discordapp.com/attachments/753632375858135152/772807172940890162/permcalculator.png"/>
 </div>
 <div class="container stacky-footer">
-<div class="result">
+<div class="oauth">
+<h3>Invite a Bot</h3>
 <p>
-<span class="permissions">Permissions: <code id="number">0</code></span>
-  &nbsp;
-<code id="equation">0x0</code>
+<span>Client ID: <input id="clientID" type="text" placeholder="264811613708746752" onkeyup="recalculate()"></span>
+<br>
+<span>Invitation Link: <a href="#" id="invite"></a></span>
 </p>
 </div>
 <div class="selector">
@@ -408,27 +409,14 @@
 </ul>
 </div>
 </div>
-<p># Permissions highlighted in <span class="orangutan-not-orange">Red</span> require that the bot owner has two factor authentication enabled.
-<div class="oauth">
-<h3>OAuth URL Generator</h3>
+  <div class="result">
 <p>
-<span>Client ID: <input id="clientID" type="text" placeholder="264811613708746752" onkeyup="recalculate()"></span>
-<br />
-<div class="selector">
-<div class="col-me-maybe">
-<input id="oauthCodeGrant" type="checkbox" onclick="recalculate()">
-<label for="oauthCodeGrant">Require Code Grant</label>
-</div>
-<div class="col-me-maybe">
-<span>Redirect URL: <input id="oauthRedirect" type="text" placeholder="(optional)" onkeyup="recalculate()"></span>
-</div>
-<div class="col-me-maybe">
-<span>Scope: <input id="oauthScopes" type="text" placeholder="bot" onkeyup="recalculate()"></span>
-</div>
-</div>
-<span>Invitation Link: <a href="#" id="invite"></a></span>
+<span class="permissions">Calculated Permissions: <code id="number">0</code></span>
+  &nbsp;
+<code id="equation">0x0</code>
 </p>
 </div>
+
  <br>
   <center>
   <a href="https://discord.gg/T4BMtSu" target="_blank"><img src="https://discordapp.com/api/guilds/683005629836951799/embed.png?style=banner2" style="border-radius:4px"></a>
