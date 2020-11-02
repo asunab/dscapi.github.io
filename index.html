@@ -273,7 +273,7 @@
 <label for="oauthCodeGrant">Require Code Grant</label>
 </div>
 <div class="col-me-maybe">
-<span>Redirect URL: <input id="oauthRedirect" type="text" placeholder="(optional)" onkeyup="recalculate()"></span>
+<span>Redirect URI: <input id="oauthRedirect" type="text" placeholder="(optional)" onkeyup="recalculate()"></span>
 </div>
 <div class="col-me-maybe">
 <span>Scope: <input id="oauthScopes" type="text" placeholder="bot" onkeyup="recalculate()"></span>
@@ -420,12 +420,13 @@
 </div>
  <br>
   <center>
+    <h3>You can contact here;</h3>
   <a href="https://discord.gg/T4BMtSu" target="_blank"><img src="https://discordapp.com/api/guilds/683005629836951799/embed.png?style=banner2" style="border-radius:4px"></a>
   </center>
   <br>
+  </div>
 <script type="text/javascript">
         var perms = {
-            // General
             generalCreateInstantInvite: 0x1,
             generalKickMembers: 0x2,
             generalBanMembers: 0x4,
@@ -438,7 +439,6 @@
             generalManageWebhooks: 0x20000000,
             generalManageEmojis: 0x40000000,
             generalViewAuditLog: 0x80,
-            // Text
             textAddReactions: 0x40,
             textReadMessages: 0x400,
             textSendMessages: 0x800,
@@ -449,7 +449,6 @@
             textReadMessageHistory: 0x10000,
             textMentionEveryone: 0x20000,
             textUseExternalEmojis: 0x40000,
-            // Voice
             voiceViewChannel: 0x400,
             voiceConnect: 0x100000,
             voiceSpeak: 0x200000,
@@ -459,16 +458,6 @@
             voiceUseVAD: 0x2000000,
             voicePrioritySpeaker: 0x100
         };
-        var darkTheme = true;
-
-        function swapTheme() {
-            darkTheme = !darkTheme;
-            if(darkTheme) {
-                document.body.className = "";
-            } else {
-                document.body.className = "light";
-            }
-        }
 
         function recalculate(element, perm, noSet) {
             if(element) {
