@@ -8,17 +8,11 @@
 <meta name="description" content="A small calculator that generates Discord OAuth invite links">
 <meta name="keywords" content="Discordperm, discordapi, perm, api, permission">
 <link rel="icon" type="image/ico" href="https://discord.com/assets/07dca80a102d4149e9736d4b162cff6f.ico" />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <title>Permissions Calculator - discordapi.js.org</title>
 <style>
         @font-face {
-            font-family: "Roboto";
-            font-weight: 400;
-            font-style: normal;
-            /* Because China can't load GFonts */
-            src: local("Roboto"), local("Roboto-Regular"),
-                 url("font/roboto-v16-latin-regular.woff2") format("woff2"),
-                 url("font/roboto-v16-latin-regular.woff") format("woff");
-            /* <=IE9? Sucks for you */
+           	font-family: Manrope, sans-serif
         }
         html, body {
             height: 100%;
@@ -28,12 +22,13 @@
             outline: 0;
             padding: 0;
 
-            font-family: "Roboto", sans-serif;
+	          font-family: Manrope, sans-serif
             font-size: 16px;
         }
         body {
             background-color: #36393f;
             color: #DDD;
+          	font-family: Manrope, sans-serif;
         }
         h3 {
             color: #FFF;
@@ -263,9 +258,9 @@
         }
     </style>
 </head>
-<body>
+<body class="select-none" draggable="false">
 <div class="header">
-<img class="logo" src="https://cdn.discordapp.com/attachments/753632375858135152/772807172940890162/permcalculator.png" alt="Discord" style="width:600px"/>
+<img draggable="false" class="logo select-none" src="https://cdn.discordapp.com/attachments/753632375858135152/772807172940890162/permcalculator.png"/>
   <!--<a class="right-link eyes" href="#" onclick="swapTheme()">
 <img src="https://abal.moe/eyes.png" alt="theme" />
 </a>-->
