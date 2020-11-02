@@ -132,7 +132,6 @@
             min-height: 1px;
             box-sizing: border-box;
             padding: 0 .5em;
-            /* More 3s than AP season */
             width: 100%;
         }
         ul {
@@ -233,7 +232,6 @@
                 display: inline;
             }
             .selector .col-me-maybe {
-                /* More 3s than AP season */
                 width: 33.3333333333%;
             }
         }
